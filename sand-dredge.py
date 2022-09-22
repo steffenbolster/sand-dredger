@@ -20,8 +20,12 @@ def getAisData(api_key, mmsi):
     return api_response['data']
 
 def main():
+    # the main function loops through the MMSI codes for identified dredgers and return known data for those dredgers
+    # source - www.vesselfinder.com
     print('dredge dredge dredge...')
+    # the below is not a real API key.  you need to paste in your API key from datalastic
     api_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    # the below are MMSI codes associated with all known Chinese dredgers from above source.
     mmsis = [
             "413368330",
             "413266590",
