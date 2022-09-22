@@ -20,7 +20,7 @@ def getAisData(api_key, mmsi):
     return api_response['data']
 
 def main():
-    print(event)
+    print('dredge dredge dredge...')
     api_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     mmsis = [
             "413368330",
@@ -106,9 +106,14 @@ def main():
             "413376050", 
             "413472070"
             ]
-        smaq = []
-        for mmsi in mmsis:
+    smaq = []
+    for mmsi in mmsis:
+        try:
             print(mmsi)
             vessel_data = getAisData(api_key, mmsi)
             smaq.append(vessel_data)
-        return smaq
+        except KeyError:
+            print('KeyError, check your API key bro...')
+    return smaq
+
+main()
