@@ -10,6 +10,6 @@ Run dredger-poll.py to get a response with the last known positions of dredgers 
 
 
 ## setup
-*pip3 install boto3*
-*pip3 install requests*
+``` pip3 install boto3 
+pip3 install requests ```
 
